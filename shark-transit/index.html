@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ШАРК ТРАНЗИТ — Грузоперевозки по России | Точность. Надежность. Результат</title>
+  <meta name="description" content="Надежные грузоперевозки для бизнеса по всей России. Тентовые фуры и рефрижераторы для грузов от 200 кг. Страхование до 10 млн ₽, отсрочка платежа до 30 дней.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <svg class="preloader__shark" viewBox="0 0 120 60" aria-hidden="true">
+          <use href="#shark-icon"></use>
+        </svg>
+        <div class="preloader__brand">ШАРК<span>— транзит —</span></div>
+      </div>
+      <div class="preloader__bar"><i></i></div>
+      <div class="preloader__caption">Готовим маршрут…</div>
+    </div>
+  </div>
+
+  <!-- ============ SVG SPRITE ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Shark + truck logo mark -->
+      <g id="shark-icon">
+        <path d="M14 22 C24 8 52 2 74 8 C84 11 92 16 97 20 L112 10 C110 15 108 19 108 22 C108 25 110 29 112 34 L96 26 C90 31 80 35 68 36 L60 44 L58 35 C44 35 28 31 14 22 Z" fill="currentColor"/>
+        <path d="M48 7 L58 -4 L60 6 Z" fill="currentColor"/>
+        <circle cx="86" cy="17" r="2.4" fill="#fff"/>
+        <!-- speeding truck under shark -->
+        <g transform="translate(30 40)">
+          <rect x="14" y="0" width="34" height="13" rx="2" fill="currentColor"/>
+          <path d="M48 3 H58 L63 8 V13 H48 Z" fill="currentColor"/>
+          <circle cx="24" cy="15" r="3.4" fill="currentColor" stroke="#fff" stroke-width="1.4"/>
+          <circle cx="55" cy="15" r="3.4" fill="currentColor" stroke="#fff" stroke-width="1.4"/>
+          <path d="M0 2 H10 M3 6.5 H12 M0 11 H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+      </g>
+      <!-- icons -->
+      <g id="i-truck"><path d="M3 16V7a1 1 0 0 1 1-1h12v10M16 9h4l3 3v4h-3M3 16h13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="18.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="18.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></g>
+      <g id="i-user"><circle cx="12" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-3.6 3.8-5.4 7-5.4s5.8 1.8 7 5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></g>
+      <g id="i-shield"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 12l2.4 2.4L15.5 9.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-doc"><rect x="6" y="3" width="12" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></g>
+      <g id="i-bolt"><path d="M13 2L5 13h5l-1 9 8-11h-5l1-9z" fill="currentColor"/></g>
+      <g id="i-arrow"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-check"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-snow"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></g>
+      <g id="i-route"><circle cx="6" cy="19" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 17.5C13 14 11 9 15.8 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 3" stroke-linecap="round"/></g>
+      <g id="i-phone"><path d="M5 4h4l1.5 4.5L8 10.5a12 12 0 0 0 5.5 5.5l2-2.5L20 15v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></g>
+      <g id="i-gps"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/></g>
+      <g id="i-ruble"><path d="M9 21V4h5.5a4.5 4.5 0 0 1 0 9H9M7 13h7M7 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></g>
+      <g id="i-clock"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></g>
+      <g id="i-box"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5v-9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></g>
+    </defs>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="ШАРК ТРАНЗИТ — на главную">
+        <svg class="logo__mark" viewBox="-2 -6 124 66"><use href="#shark-icon"></use></svg>
+        <span class="logo__text">ШАРК<small>— транзит —</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#services">Услуги</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#about">О компании</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header__right">
+        <a href="tel:+79000000000" class="header__phone">+7 (900) 000-00-00</a>
+        <a href="#cta" class="btn btn--accent btn--sm">
+          <svg class="ic"><use href="#i-bolt"></use></svg>
+          Нужна срочная доставка
+        </a>
+      </div>
+      <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__panel">
+        <div class="hero__sky"></div>
+        <div class="hero__mountains">
+          <svg viewBox="0 0 900 380" preserveAspectRatio="xMidYMax slice">
+            <path d="M0 380 L160 140 L260 250 L400 60 L540 240 L660 120 L780 260 L900 150 L900 380 Z" fill="rgba(255,255,255,.10)"/>
+            <path d="M0 380 L120 230 L300 330 L470 170 L640 330 L820 220 L900 300 L900 380 Z" fill="rgba(255,255,255,.07)"/>
+          </svg>
+        </div>
+        <div class="hero__road">
+          <i class="hero__line"></i><i class="hero__line"></i><i class="hero__line"></i>
+        </div>
+      </div>
+      <!-- Flat illustrated semi-truck -->
+      <div class="hero__truck" id="heroTruck">
+        <svg viewBox="0 0 760 280">
+          <!-- trailer -->
+          <g>
+            <rect x="10" y="30" width="500" height="170" rx="10" fill="#13294b"/>
+            <rect x="10" y="30" width="500" height="42" rx="10" fill="#0e2140"/>
+            <g fill="#fff" opacity=".95" text-anchor="middle">
+              <text x="330" y="138" font-family="Montserrat, sans-serif" font-weight="900" font-size="56" letter-spacing="6">ШАРК</text>
+              <text x="330" y="170" font-family="Manrope, sans-serif" font-weight="600" font-size="16" letter-spacing="8">— ТРАНЗИТ —</text>
+            </g>
+            <g transform="translate(48 78) scale(1.3)" fill="#fff" opacity=".95">
+              <use href="#shark-icon" style="color:#fff"></use>
+            </g>
+            <rect x="10" y="196" width="500" height="8" fill="#0b1b35"/>
+          </g>
+          <!-- cab -->
+          <g>
+            <path d="M518 200 V70 a14 14 0 0 1 14-14 h96 a16 16 0 0 1 13 7 l36 54 a20 20 0 0 1 4 12 v71 Z" fill="#1d4ed8"/>
+            <path d="M518 200 V70 a14 14 0 0 1 14-14 h96 a16 16 0 0 1 13 7 l14 21 H548 a10 10 0 0 0-10 10 v92 Z" fill="#2563eb"/>
+            <path d="M588 64 h36 a10 10 0 0 1 8 4.4 L662 102 H588 Z" fill="#bfdbfe"/>
+            <path d="M588 64 h18 l-2 38 h-16 Z" fill="#dbeafe"/>
+            <rect x="520" y="120" width="10" height="44" rx="4" fill="#93c5fd" opacity=".7"/>
+            <rect x="660" y="140" width="22" height="34" rx="4" fill="#1e40af"/>
+            <circle cx="672" cy="128" r="7" fill="#fef08a"/>
+            <rect x="640" y="186" width="44" height="14" rx="6" fill="#0f172a"/>
+          </g>
+          <!-- chassis + wheels -->
+          <rect x="10" y="200" width="672" height="12" rx="5" fill="#0b1b35"/>
+          <g class="wheel"><circle cx="80" cy="226" r="30" fill="#0f172a"/><circle cx="80" cy="226" r="14" fill="#334155"/><path class="hub" d="M80 214v24M68 226h24" stroke="#94a3b8" stroke-width="3"/></g>
+          <g class="wheel"><circle cx="160" cy="226" r="30" fill="#0f172a"/><circle cx="160" cy="226" r="14" fill="#334155"/><path class="hub" d="M160 214v24M148 226h24" stroke="#94a3b8" stroke-width="3"/></g>
+          <g class="wheel"><circle cx="240" cy="226" r="30" fill="#0f172a"/><circle cx="240" cy="226" r="14" fill="#334155"/><path class="hub" d="M240 214v24M228 226h24" stroke="#94a3b8" stroke-width="3"/></g>
+          <g class="wheel"><circle cx="556" cy="226" r="32" fill="#0f172a"/><circle cx="556" cy="226" r="15" fill="#334155"/><path class="hub" d="M556 213v26M543 226h26" stroke="#94a3b8" stroke-width="3"/></g>
+          <g class="wheel"><circle cx="648" cy="226" r="32" fill="#0f172a"/><circle cx="648" cy="226" r="15" fill="#334155"/><path class="hub" d="M648 213v26M635 226h26" stroke="#94a3b8" stroke-width="3"/></g>
+          <!-- speed lines -->
+          <g class="speed" stroke="#93c5fd" stroke-width="6" stroke-linecap="round" opacity=".8">
+            <path d="M-40 90 H-110"/><path d="M-20 150 H-130"/><path d="M-50 210 H-100"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero__content">
+      <div class="hero__badge anim" style="--d:.05s"><i></i>ГРУЗОПЕРЕВОЗКИ ПО РОССИИ</div>
+      <h1 class="hero__title">
+        <span class="anim" style="--d:.12s">Точность</span>
+        <span class="anim" style="--d:.22s">Надежность</span>
+        <span class="hero__title-accent anim" style="--d:.32s">Результат</span>
+      </h1>
+      <p class="hero__text anim" style="--d:.42s">Надежные грузоперевозки для бизнеса по&nbsp;всей России. Соблюдаем договоренности, берем ответственность на&nbsp;себя</p>
+      <div class="hero__actions anim" style="--d:.52s">
+        <a href="#calculator" class="btn btn--primary btn--lg">Рассчитать стоимость</a>
+        <a href="#services" class="btn-link">Услуги <svg class="ic"><use href="#i-arrow"></use></svg></a>
+      </div>
+      </div>
+    </div>
+
+    <!-- stats card -->
+    <div class="container">
+      <div class="stats reveal" id="stats">
+        <div class="stats__item">
+          <svg class="stats__icon"><use href="#i-truck"></use></svg>
+          <div><b><span class="count" data-to="13">0</span>+</b><span>лет опыта</span><small>на рынке грузоперевозок</small></div>
+        </div>
+        <div class="stats__item">
+          <svg class="stats__icon"><use href="#i-user"></use></svg>
+          <div><b><span class="count" data-to="0">0</span></b><span>убытков</span><small>у заказчиков за все время</small></div>
+        </div>
+        <div class="stats__item">
+          <svg class="stats__icon"><use href="#i-shield"></use></svg>
+          <div><b>до <span class="count" data-to="10">0</span> млн</b><span>рублей</span><small>страхование доставляемого груза</small></div>
+        </div>
+        <div class="stats__item">
+          <svg class="stats__icon"><use href="#i-doc"></use></svg>
+          <div><b>до <span class="count" data-to="30">0</span></b><span>дней</span><small>отсрочка платежа после доставки</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__label reveal">Что перевозим</div>
+      <h2 class="section__title reveal">Тентовые фуры и&nbsp;рефрижераторы<br>для любых грузов <em>от&nbsp;200&nbsp;кг</em></h2>
+      <p class="section__sub reveal">Собственный автопарк 10 и 20-тонных машин с проверенными водителями.<br>Каждая перевозка под контролем — «передал и забыл» работает у нас буквально.</p>
+
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--tent">
+            <svg viewBox="0 0 220 110"><rect x="8" y="18" width="150" height="62" rx="6" fill="rgba(255,255,255,.22)"/><path d="M158 32h28l16 20v28h-44z" fill="rgba(255,255,255,.32)"/><circle cx="44" cy="86" r="12" fill="rgba(255,255,255,.45)"/><circle cx="76" cy="86" r="12" fill="rgba(255,255,255,.45)"/><circle cx="178" cy="86" r="12" fill="rgba(255,255,255,.45)"/></svg>
+          </div>
+          <h3>Тентовые перевозки</h3>
+          <p>Универсальные фуры для промышленных и&nbsp;потребительских грузов. Боковая, задняя и&nbsp;верхняя загрузка, крепление ремнями.</p>
+          <ul class="service-card__list">
+            <li><svg class="ic"><use href="#i-check"></use></svg>Грузы от 200 кг до 20 т</li>
+            <li><svg class="ic"><use href="#i-check"></use></svg>Объем до 92 м³</li>
+            <li><svg class="ic"><use href="#i-check"></use></svg>Подача машины от 12 часов</li>
+          </ul>
+          <div class="service-card__footer">
+            <div class="service-card__price">от 40 000 ₽<small>за перевозку</small></div>
+            <a href="#cta" class="btn btn--ghost">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal" style="--d:.12s">
+          <div class="service-card__media service-card__media--ref">
+            <svg viewBox="0 0 220 110"><rect x="8" y="18" width="150" height="62" rx="6" fill="rgba(255,255,255,.22)"/><path d="M158 32h28l16 20v28h-44z" fill="rgba(255,255,255,.32)"/><circle cx="44" cy="86" r="12" fill="rgba(255,255,255,.45)"/><circle cx="76" cy="86" r="12" fill="rgba(255,255,255,.45)"/><circle cx="178" cy="86" r="12" fill="rgba(255,255,255,.45)"/><g transform="translate(70 36) scale(1.1)" color="#fff"><use href="#i-snow"></use></g></svg>
+          </div>
+          <h3>Рефрижераторные перевозки</h3>
+          <p>Температурный режим от&nbsp;−20&nbsp;°C до&nbsp;+12&nbsp;°C для продуктов, фармацевтики и&nbsp;чувствительных грузов. Датчики температуры в&nbsp;пути.</p>
+          <ul class="service-card__list">
+            <li><svg class="ic"><use href="#i-check"></use></svg>Режим −20…+12 °C</li>
+            <li><svg class="ic"><use href="#i-check"></use></svg>Санитарные паспорта машин</li>
+            <li><svg class="ic"><use href="#i-check"></use></svg>Контроль температуры онлайн</li>
+          </ul>
+          <div class="service-card__footer">
+            <div class="service-card__price">от 60 000 ₽<small>за перевозку</small></div>
+            <a href="#cta" class="btn btn--ghost">Подробнее</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="services__extra">
+        <div class="chip reveal"><svg class="ic"><use href="#i-shield"></use></svg>Досмотр и фотофиксация при получении груза</div>
+        <div class="chip reveal" style="--d:.08s"><svg class="ic"><use href="#i-truck"></use></svg>Перевозки на машинах со спецификой</div>
+        <div class="chip reveal" style="--d:.16s"><svg class="ic"><use href="#i-doc"></use></svg>Возврат товаросопроводительных документов</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="section section--dark" id="calculator">
+    <div class="container calc">
+      <div class="calc__info">
+        <div class="section__label section__label--light reveal">Рассчитать стоимость</div>
+        <h2 class="section__title reveal">Узнайте цену<br>за <em>30 секунд</em></h2>
+        <ul class="calc__points">
+          <li class="reveal"><svg class="ic"><use href="#i-check"></use></svg>Цена в калькуляторе — это итоговая стоимость без скрытых доплат и «вилок»</li>
+          <li class="reveal" style="--d:.08s"><svg class="ic"><use href="#i-check"></use></svg>Ответим на заявку за 15 минут в рабочее время — телефоном или в мессенджере</li>
+          <li class="reveal" style="--d:.16s"><svg class="ic"><use href="#i-check"></use></svg>Если груз нестандартный — менеджер соберет решение под задачу вручную</li>
+        </ul>
+      </div>
+
+      <form class="calc__form reveal" id="calcForm" novalidate>
+        <div class="calc__form-head">Калькулятор стоимости<span id="calcDate"></span></div>
+        <div class="field-row">
+          <label class="field"><span>Откуда</span><input type="text" placeholder="Москва" id="calcFrom" required></label>
+          <label class="field"><span>Куда</span><input type="text" placeholder="Санкт-Петербург" id="calcTo" required></label>
+        </div>
+        <div class="field-row">
+          <label class="field"><span>Вес груза, кг</span><input type="number" placeholder="2 000" min="200" id="calcWeight"></label>
+          <label class="field"><span>Дата отправки</span><input type="date" id="calcWhen"></label>
+        </div>
+        <div class="calc__type" role="radiogroup" aria-label="Тип кузова">
+          <label><input type="radio" name="body" value="tent" checked><span>Тент</span></label>
+          <label><input type="radio" name="body" value="ref"><span>Рефрижератор</span></label>
+          <label><input type="radio" name="body" value="other"><span>Другое</span></label>
+        </div>
+        <div class="calc__result" id="calcResult" hidden>
+          <small>Стоимость с доставкой <b id="calcRoute"></b></small>
+          <strong id="calcPrice">—</strong>
+        </div>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">Рассчитать стоимость</button>
+        <p class="calc__note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CLIENTS MARQUEE ============ -->
+  <section class="clients">
+    <div class="container">
+      <h2 class="clients__title reveal">Более <em>300 компаний</em> работают с нами повторно</h2>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack">
+        <span>СЕВЕРСТРОЙ</span><span>АГРОХОЛДИНГ&nbsp;РУСЬ</span><span>ТД&nbsp;МЕРИДИАН</span><span>ФАРМЛОГИКА</span><span>ВОЛГА-ПРОДУКТ</span><span>СТАЛЬКОМПЛЕКТ</span><span>БАЛТИК&nbsp;ФУД</span><span>ЭНЕРГОМАШ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section__label reveal">Почему выбирают нас</div>
+      <h2 class="section__title reveal">Клиент передает груз и&nbsp;больше ни&nbsp;о&nbsp;чем не&nbsp;думает.<br><em>Все риски, документы и&nbsp;маршрут — на&nbsp;нас</em></h2>
+
+      <div class="why__grid">
+        <div class="why-card reveal"><svg class="why-card__icon"><use href="#i-box"></use></svg><h3>Один заказчик — один груз</h3><p>Не делаем сборные перевозки: машина едет только с вашим грузом, без дозагрузок и лишних остановок.</p></div>
+        <div class="why-card reveal" style="--d:.07s"><svg class="why-card__icon"><use href="#i-shield"></use></svg><h3>0 убытков за 13 лет работы</h3><p>Каждый груз застрахован на сумму до 10 млн рублей. Ответственность прописана в договоре, а не на словах.</p></div>
+        <div class="why-card reveal" style="--d:.14s"><svg class="why-card__icon"><use href="#i-gps"></use></svg><h3>GPS и фотоотчеты в моменте</h3><p>Видите, где машина, в реальном времени. Фотофиксация погрузки, пломб и выгрузки — в вашем мессенджере.</p></div>
+        <div class="why-card reveal" style="--d:.21s"><svg class="why-card__icon"><use href="#i-ruble"></use></svg><h3>Цена зафиксирована в договоре</h3><p>Стоимость не меняется в пути. Никаких «дорога подорожала» и доплат по факту доставки.</p></div>
+        <div class="why-card reveal" style="--d:.28s"><svg class="why-card__icon"><use href="#i-doc"></use></svg><h3>Отсрочка платежа до 30 дней</h3><p>Работаем по постоплате с юридическими лицами. ЭДО, оригиналы документов возвращаем сами.</p></div>
+        <div class="why-card reveal" style="--d:.35s"><svg class="why-card__icon"><use href="#i-clock"></use></svg><h3>Подача машины от 12 часов</h3><p>Свой автопарк и резервные машины: закрываем срочные заявки, когда другие только считают.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROUTES ============ -->
+  <section class="section section--gray" id="routes">
+    <div class="container">
+      <div class="section__label reveal">Основные направления</div>
+      <h2 class="section__title reveal">СЗФО · ЦФО · ЮФО · <em>Новые территории</em></h2>
+      <p class="section__sub reveal">Маршруты, которые возим каждую неделю. Работаем по всей России — если вашего направления нет в списке, рассчитаем индивидуально.</p>
+
+      <div class="routes">
+        <div class="routes__map reveal" aria-hidden="true">
+          <svg viewBox="0 0 420 320">
+            <path d="M30 220 C60 140 140 60 240 60 C330 60 395 130 390 210 C385 275 300 295 210 285 C120 275 10 280 30 220 Z" fill="#e8eefc"/>
+            <g class="routes__dots">
+              <circle cx="120" cy="120" r="6" fill="#2563eb"/><text x="132" y="116">Санкт-Петербург</text>
+              <circle cx="170" cy="180" r="7" fill="#0b1b35"/><text x="182" y="176">Москва</text>
+              <circle cx="200" cy="100" r="5" fill="#2563eb"/><text x="212" y="96">Вологда</text>
+              <circle cx="140" cy="260" r="5" fill="#2563eb"/><text x="152" y="256">Краснодар</text>
+              <circle cx="300" cy="90" r="5" fill="#2563eb"/><text x="252" y="74">Архангельск</text>
+            </g>
+            <g class="routes__paths" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 6" fill="none" opacity=".65">
+              <path d="M170 180 C150 155 135 140 120 120"/>
+              <path d="M170 180 C185 150 195 125 200 100"/>
+              <path d="M170 180 C160 215 150 240 140 260"/>
+              <path d="M200 100 C235 85 270 84 300 90"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="routes__list">
+          <a class="route reveal" href="#cta"><span class="route__cities">Вологда <svg class="ic"><use href="#i-arrow"></use></svg> Москва</span><span class="route__meta">тент 20 т · 1 день</span><span class="route__price">от 45 000 ₽</span></a>
+          <a class="route reveal" style="--d:.06s" href="#cta"><span class="route__cities">Вологда <svg class="ic"><use href="#i-arrow"></use></svg> Санкт-Петербург</span><span class="route__meta">тент 20 т · 1 день</span><span class="route__price">от 48 000 ₽</span></a>
+          <a class="route reveal" style="--d:.12s" href="#cta"><span class="route__cities">Москва <svg class="ic"><use href="#i-arrow"></use></svg> Краснодар</span><span class="route__meta">тент 20 т · 2 дня</span><span class="route__price">от 95 000 ₽</span></a>
+          <a class="route reveal" style="--d:.18s" href="#cta"><span class="route__cities">Санкт-Петербург <svg class="ic"><use href="#i-arrow"></use></svg> Архангельск</span><span class="route__meta">реф 10 т · 2 дня</span><span class="route__price">от 88 000 ₽</span></a>
+          <a class="route route--wide reveal" style="--d:.24s" href="#cta"><span class="route__cities">Любой регион России <svg class="ic"><use href="#i-arrow"></use></svg> ЛНР · ДНР</span><span class="route__meta">допуски и сопровождение</span><span class="route__price">от 60 000 ₽</span></a>
+        </div>
+      </div>
+
+      <form class="routes__custom reveal" id="routeForm">
+        <b>Нужен маршрут не из списка?</b>
+        <input type="text" placeholder="Откуда" required>
+        <input type="text" placeholder="Куда" required>
+        <button type="submit" class="btn btn--primary">Узнать цену</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section__label reveal">Как проходит перевозка</div>
+      <h2 class="section__title reveal">Передали груз — <em>всё остальное на нас</em></h2>
+
+      <div class="steps">
+        <div class="steps__line" aria-hidden="true"><i id="stepsProgress"></i></div>
+        <div class="step reveal"><b>1</b><h3>Звонок</h3><p>Обсуждаем груз, маршрут и сроки. Достаточно 5 минут.</p></div>
+        <div class="step reveal" style="--d:.08s"><b>2</b><h3>Расчет и договор</h3><p>Фиксируем цену и ответственность. Подписываем по ЭДО.</p></div>
+        <div class="step reveal" style="--d:.16s"><b>3</b><h3>Подача машины</h3><p>Машина на загрузке точно в срок. Фотофиксация и пломбы.</p></div>
+        <div class="step reveal" style="--d:.24s"><b>4</b><h3>В пути</h3><p>GPS-трекинг и статусы. Любой вопрос — один звонок менеджеру.</p></div>
+        <div class="step reveal" style="--d:.32s"><b>5</b><h3>Вы получаете отчет</h3><p>Доставка, документы, закрывающие. Оплата с отсрочкой до 30 дней.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASES ============ -->
+  <section class="section section--dark" id="cases">
+    <div class="container">
+      <div class="section__label section__label--light reveal">Грузим не на словах</div>
+      <h2 class="section__title reveal">Решали задачи <em>сложнее, чем кажется</em></h2>
+      <p class="section__sub reveal">Сценарии из практики — те случаи, когда клиенты приходили к нам после отказов других перевозчиков.</p>
+
+      <div class="cases__grid">
+        <article class="case-card reveal">
+          <div class="case-card__tag">Рефрижератор · −18 °C</div>
+          <h3>Холодильное оборудование из&nbsp;Северодвинска — за&nbsp;Калининград</h3>
+          <p>Транзит через две границы с температурным режимом. Подготовили документы, прошли без простоев — груз пришел день в день.</p>
+          <div class="case-card__meta"><span>2 100 км</span><span>3 дня</span><span>0 повреждений</span></div>
+        </article>
+        <article class="case-card reveal" style="--d:.1s">
+          <div class="case-card__tag">Негабарит · сопровождение</div>
+          <h3>Вынесли цех: 14&nbsp;станков с&nbsp;ЧПУ без единого скола за&nbsp;один рейс</h3>
+          <p>Разработали схему крепления с инженером клиента, усилили пол, везли с ограничением скорости. Завод запустился по графику.</p>
+          <div class="case-card__meta"><span>860 км</span><span>2 дня</span><span>14 станков</span></div>
+        </article>
+        <article class="case-card reveal" style="--d:.2s">
+          <div class="case-card__tag">Срочная подача · 8 часов</div>
+          <h3>Сорвался перевозчик у&nbsp;сети магазинов — машина у&nbsp;ворот в&nbsp;тот же вечер</h3>
+          <p>Заявка пришла в 14:00, в 22:00 фура стояла под загрузкой. Скоропорт доехал в санитарной машине с запасом по срокам.</p>
+          <div class="case-card__meta"><span>520 км</span><span>1 день</span><span>подача за 8 ч</span></div>
+        </article>
+      </div>
+      <div class="cases__more reveal"><a href="#cta" class="btn-link btn-link--light">Хочу так же <svg class="ic"><use href="#i-arrow"></use></svg></a></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__text">
+        <div class="section__label reveal">О компании</div>
+        <h2 class="section__title reveal">Не агентство и не биржа.<br><em>Семейная компания с историей</em></h2>
+        <div class="about__story reveal">
+          <p>«ШАРК ТРАНЗИТ» начинался в 2012 году с одной машины и принципа, который мы не меняем до сих пор: <b>пообещал — довези</b>. Сегодня это собственный автопарк, штатные водители и команда логистов, которые знают каждого клиента по имени.</p>
+          <p>Мы не перепродаем заявки и не разыгрываем ваши грузы на бирже. Машина, водитель, страховка и ответственность — наши собственные. Поэтому мы единственные, с кем вы разговариваете, и единственные, кто отвечает за результат.</p>
+        </div>
+        <div class="about__sign reveal">
+          <b>Семья Шарковых</b>
+          <span>основатели и руководители компании</span>
+        </div>
+      </div>
+      <div class="about__media reveal">
+        <div class="about__photo">
+          <svg viewBox="0 0 360 420" aria-hidden="true">
+            <rect width="360" height="420" rx="18" fill="#e8eefc"/>
+            <circle cx="180" cy="150" r="58" fill="#c3d4f7"/>
+            <path d="M70 420 C80 320 130 280 180 280 C230 280 280 320 290 420 Z" fill="#c3d4f7"/>
+            <g transform="translate(120 330) scale(1)" color="#2563eb" opacity=".9"><use href="#shark-icon"></use></g>
+          </svg>
+          <div class="about__photo-caption">Фото команды</div>
+        </div>
+        <div class="about__facts">
+          <div><b>13+</b><span>лет на рынке</span></div>
+          <div><b>20</b><span>машин в автопарке</span></div>
+          <div><b>300+</b><span>постоянных клиентов</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="section section--gray" id="reviews">
+    <div class="container">
+      <div class="section__label reveal">Отзывы клиентов</div>
+      <h2 class="section__title reveal">Что говорят те, <em>кто работает с нами</em></h2>
+
+      <div class="reviews__grid">
+        <figure class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <blockquote>«Работаем с ШАРКом больше двух лет. Возили всё — от паллет с продуктами до оборудования. Ни одного срыва сроков, документы всегда возвращаются вовремя. Это редкость».</blockquote>
+          <figcaption><b>Ольга С.</b><span>логист, ТД «Меридиан»</span></figcaption>
+        </figure>
+        <figure class="review reveal" style="--d:.1s">
+          <div class="review__stars">★★★★★</div>
+          <blockquote>«Цена не самая низкая на рынке, но зато финальная. После бирж, где доплаты вылезали в пути, это лучшее, что с нами случалось. Менеджер на связи даже в выходные».</blockquote>
+          <figcaption><b>Дмитрий В.</b><span>директор по снабжению, «Энергомаш»</span></figcaption>
+        </figure>
+        <figure class="review reveal" style="--d:.2s">
+          <div class="review__stars">★★★★★</div>
+          <blockquote>«Возим скоропорт в рефрижераторах. Температурные графики присылают без напоминаний, машины чистые, водители аккуратные. Перешли к ним полностью со всех направлений».</blockquote>
+          <figcaption><b>Марина К.</b><span>руководитель отдела логистики, «Балтик Фуд»</span></figcaption>
+        </figure>
+      </div>
+      <div class="reviews__links reveal">
+        <a href="#" class="btn-link">Все отзывы на Яндекс.Картах <svg class="ic"><use href="#i-arrow"></use></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div class="faq__head">
+        <div class="section__label reveal">Частые вопросы</div>
+        <h2 class="section__title reveal">Отвечаем до того,<br><em>как вы позвонили</em></h2>
+        <div class="faq__hint reveal">
+          <p>Не нашли ответ? Спросите напрямую — менеджер отвечает за 15 минут в рабочее время.</p>
+          <a href="#cta" class="btn btn--primary">Задать вопрос</a>
+        </div>
+      </div>
+      <div class="faq__list">
+        <details class="faq__item reveal" open>
+          <summary>Как быстро вы подаете машину?<i></i></summary>
+          <p>Стандартно — от 12 часов с момента подписания заявки. По срочным запросам можем подать машину в тот же день: в автопарке всегда есть резерв под горящие заявки.</p>
+        </details>
+        <details class="faq__item reveal" style="--d:.06s">
+          <summary>Что будет, если груз повредят в пути?<i></i></summary>
+          <p>Каждая перевозка застрахована на сумму до 10 млн рублей, ответственность зафиксирована в договоре. За 13 лет работы у наших заказчиков не было ни одного убытка — но если что-то случится, компенсация выплачивается по страховке, без судов и затягиваний.</p>
+        </details>
+        <details class="faq__item reveal" style="--d:.12s">
+          <summary>Работаете ли вы с отсрочкой платежа?<i></i></summary>
+          <p>Да, с юридическими лицами работаем по постоплате с отсрочкой до 30 дней после доставки. Документооборот — через ЭДО, оригиналы товаросопроводительных документов возвращаем сами.</p>
+        </details>
+        <details class="faq__item reveal" style="--d:.18s">
+          <summary>Можно ли отслеживать груз в пути?<i></i></summary>
+          <p>Да. Все машины оборудованы GPS-мониторингом — пришлем ссылку на трекинг. Дополнительно менеджер присылает статусы и фотоотчеты с погрузки и выгрузки в удобный вам мессенджер.</p>
+        </details>
+        <details class="faq__item reveal" style="--d:.24s">
+          <summary>Возите ли вы сборные грузы?<i></i></summary>
+          <p>Нет, и это принципиально: одна машина — один заказчик. Так груз едет быстрее, без перегрузок на складах и рисков от чужих грузов. Минимальный вес для рентабельной перевозки — от 200 кг.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta" id="cta">
+    <div class="container cta__inner">
+      <div class="cta__text">
+        <h2 class="reveal">Готовы организовать перевозку?</h2>
+        <p class="reveal">Оставьте заявку — менеджер перезвонит в течение 15 минут в рабочее время, рассчитает стоимость и ответит на вопросы.</p>
+        <div class="cta__truck" aria-hidden="true">
+          <svg viewBox="0 0 120 60" color="rgba(255,255,255,.25)"><use href="#shark-icon"></use></svg>
+        </div>
+      </div>
+      <form class="cta__form reveal" id="ctaForm" novalidate>
+        <label class="field field--light"><span>Ваше имя</span><input type="text" placeholder="Иван" required></label>
+        <label class="field field--light"><span>Телефон</span><input type="tel" placeholder="+7 (___) ___-__-__" required></label>
+        <label class="field field--light"><span>Что и куда везем (необязательно)</span><input type="text" placeholder="Паллеты, Москва → Казань"></label>
+        <button type="submit" class="btn btn--accent btn--lg btn--block">Получить расчет</button>
+        <p class="calc__note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER / CONTACTS ============ -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <a href="#" class="logo logo--light">
+          <svg class="logo__mark" viewBox="-2 -6 124 66"><use href="#shark-icon"></use></svg>
+          <span class="logo__text">ШАРК<small>— транзит —</small></span>
+        </a>
+        <p>Надежные грузоперевозки для бизнеса по всей России с 2012 года.</p>
+      </div>
+      <div class="footer__col">
+        <b>Контакты</b>
+        <a href="tel:+79000000000" class="footer__phone">+7 (900) 000-00-00</a>
+        <a href="mailto:zakaz@shark-tranzit.ru">zakaz@shark-tranzit.ru</a>
+        <span>г. Вологда, ул. Хитрова Прорыва, 13</span>
+        <span>Пн–Вс, 8:00 — 22:00</span>
+      </div>
+      <div class="footer__col">
+        <b>Разделы</b>
+        <a href="#services">Услуги</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#about">О компании</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+      <div class="footer__col">
+        <b>Мессенджеры</b>
+        <a href="#">WhatsApp</a>
+        <a href="#">Telegram</a>
+        <a href="#">VK</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2012–2026 ООО «ШАРК ТРАНЗИТ». Все права защищены.</span>
+      <a href="#">Политика обработки персональных данных</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
