@@ -2,22 +2,47 @@
 (function () {
   'use strict';
 
-  /* ---------- Прелоадер ---------- */
+  /* ---------- Прелоадер с процентами ---------- */
   var preloader = document.getElementById('preloader');
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      preloader.classList.add('is-done');
-      document.body.style.overflow = '';
-    }, 1500);
-  });
-  // страховка: убрать прелоадер, даже если load задержался
-  setTimeout(function () { preloader.classList.add('is-done'); }, 4000);
+  var preCount = document.getElementById('preCount');
+  var preBar = document.getElementById('preBar');
+  var progress = 0;
+  var loaded = false;
 
-  /* ---------- Шапка при скролле ---------- */
+  var preTimer = setInterval(function () {
+    // до события load тянемся к 90%, после — добегаем до 100
+    var target = loaded ? 100 : 90;
+    progress = Math.min(progress + Math.max(1, (target - progress) * 0.12), target);
+    var val = Math.round(progress);
+    if (preCount) preCount.textContent = val + '%';
+    if (preBar) preBar.style.width = val + '%';
+    if (val >= 100) {
+      clearInterval(preTimer);
+      setTimeout(function () { preloader.classList.add('is-done'); }, 350);
+    }
+  }, 30);
+
+  window.addEventListener('load', function () { loaded = true; });
+  // страховка: убрать прелоадер, даже если load задержался
+  setTimeout(function () {
+    loaded = true;
+    setTimeout(function () { preloader.classList.add('is-done'); }, 1200);
+  }, 3500);
+
+  /* ---------- Шапка: фон при скролле + автоскрытие вниз ---------- */
   var header = document.getElementById('header');
+  var lastY = 0;
   function onScroll() {
-    header.classList.toggle('is-scrolled', window.scrollY > 40);
+    var y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 40);
+    header.classList.toggle('is-hidden', y > 600 && y > lastY);
+    lastY = y;
+
+    var doc = document.documentElement;
+    var p = y / (doc.scrollHeight - doc.clientHeight || 1);
+    scrollProgress.style.width = (p * 100) + '%';
   }
+  var scrollProgress = document.getElementById('scrollProgress');
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -29,7 +54,7 @@
     nav.classList.toggle('is-open');
   });
   nav.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A') {
+    if (e.target.closest('a')) {
       burger.classList.remove('is-open');
       nav.classList.remove('is-open');
     }
@@ -43,13 +68,13 @@
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal').forEach(function (el) {
     revealObserver.observe(el);
   });
 
-  /* ---------- Счетчики в блоке статистики ---------- */
+  /* ---------- Счетчики ---------- */
   function animateCount(el) {
     var to = parseInt(el.dataset.to, 10);
     if (!to) { el.textContent = el.dataset.to; return; }
@@ -57,7 +82,6 @@
     var start = performance.now();
     function tick(now) {
       var p = Math.min((now - start) / duration, 1);
-      // ease-out
       var eased = 1 - Math.pow(1 - p, 3);
       el.textContent = Math.round(to * eased);
       if (p < 1) requestAnimationFrame(tick);
@@ -76,7 +100,7 @@
     statsObserver.observe(stats);
   }
 
-  /* ---------- Прогресс линии шагов ---------- */
+  /* ---------- Прогресс линии этапов ---------- */
   var stepsProgress = document.getElementById('stepsProgress');
   if (stepsProgress) {
     var stepsObserver = new IntersectionObserver(function (entries) {
@@ -88,16 +112,17 @@
     stepsObserver.observe(stepsProgress.parentElement);
   }
 
-  /* ---------- Дублируем дорожку марки для бесшовной ленты ---------- */
-  var track = document.getElementById('marqueeTrack');
-  if (track) track.innerHTML += track.innerHTML;
+  /* ---------- Бегущие строки: дублируем дорожки ---------- */
+  document.querySelectorAll('.marquee__track').forEach(function (track) {
+    track.innerHTML += track.innerHTML;
+  });
 
   /* ---------- Калькулятор (демо-расчет для макета) ---------- */
   var calcForm = document.getElementById('calcForm');
   var calcDate = document.getElementById('calcDate');
   if (calcDate) {
     calcDate.textContent = new Date().toLocaleDateString('ru-RU', {
-      day: 'numeric', month: 'long', year: 'numeric'
+      day: '2-digit', month: '2-digit', year: 'numeric'
     });
   }
   if (calcForm) {
