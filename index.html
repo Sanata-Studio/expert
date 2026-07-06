@@ -10,19 +10,14 @@
     />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0f14'/%3E%3Crect x='14' y='20' width='34' height='22' rx='4' fill='none' stroke='white' stroke-width='5'/%3E%3Cpath d='M12 44h40' stroke='%23ff5a3c' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='47' cy='17' r='5' fill='%23ffcb47'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2314181d'/%3E%3Crect x='14' y='20' width='34' height='22' rx='3' fill='none' stroke='white' stroke-width='5'/%3E%3Cpath d='M12 44h40' stroke='%23e01e26' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='47' cy='17' r='5' fill='%23ffb020'/%3E%3C/svg%3E"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
     <header class="site-header" id="top" data-header>
       <a class="brand" href="#top" aria-label="Автоворота35">
-        <span class="brand-mark" aria-hidden="true">
-          <span></span>
-        </span>
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
         <span class="brand-text">
           <strong>Автоворота35</strong>
           <small>Вологда и область</small>
@@ -44,90 +39,66 @@
     </header>
 
     <main>
+      <!-- HERO -->
       <section class="hero" id="hero">
-        <div class="aurora" aria-hidden="true">
-          <span class="blob blob-1"></span>
-          <span class="blob blob-2"></span>
-          <span class="blob blob-3"></span>
-        </div>
-        <div class="hero-grid-lines" aria-hidden="true"></div>
-
+        <div class="hero-hazard" aria-hidden="true"></div>
         <div class="hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow reveal"><span class="pulse-dot"></span> Шоурум в АКСОНе · свой монтаж с 2014</p>
+            <p class="kicker light reveal"><b>2014</b> · своя монтажная бригада · шоурум в АКСОНе</p>
             <h1 class="reveal">
-              Автоматические ворота, которые
-              <span class="grad-text">работают зимой</span>
-              без сюрпризов
+              Автоматические<br />ворота <span class="mark">под&nbsp;ключ</span><br />в Вологде
             </h1>
             <p class="lead reveal">
-              Подберём систему под ваш проём, бюджет и морозы Вологды:
-              замер, комплектация, монтаж, настройка автоматики и сервис в одних руках.
+              Замер, комплектация, монтаж, настройка автоматики и сервис — в одних руках.
+              Подберём систему под ваш проём, бюджет и морозы региона.
             </p>
             <div class="hero-actions reveal">
               <a class="btn btn-primary magnetic" href="#calculator"><span>Рассчитать стоимость</span></a>
-              <a class="btn btn-ghost magnetic" href="#request"><span>Вызвать замерщика</span></a>
+              <a class="btn btn-outline magnetic" href="#request"><span>Вызвать замерщика</span></a>
             </div>
-
-            <div class="hero-stats reveal">
-              <article>
-                <strong data-count="10" data-suffix="+">0</strong>
-                <span>лет в Вологде</span>
-              </article>
-              <article>
-                <strong data-count="4.9" data-decimals="1">0</strong>
-                <span>на Яндекс.Картах</span>
-              </article>
-              <article>
-                <strong data-count="0" data-prefix="" data-suffix=" ₽">0 ₽</strong>
-                <span>выезд замерщика</span>
-              </article>
-              <article>
-                <strong data-count="1" data-suffix=" день">0</strong>
-                <span>типовой монтаж</span>
-              </article>
-            </div>
+            <ul class="hero-badges reveal">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Гарантия до 10 лет</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Монтаж за 1 день</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M4 20v-1a6 6 0 0 1 12 0v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="7" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M17 13a4 4 0 0 1 4 4v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Своя бригада</li>
+            </ul>
           </div>
 
-          <div class="hero-visual reveal">
-            <div class="gate-scene" data-tilt>
-              <div class="gate-frame">
-                <div class="gate-track"></div>
-                <div class="gate-door">
-                  <span></span><span></span><span></span><span></span>
-                </div>
-                <div class="gate-sensor" aria-hidden="true">
-                  <span class="ring"></span>
-                  <span class="core"></span>
-                </div>
-                <div class="gate-floor"></div>
-              </div>
-              <div class="gate-badge glass">
-                <span class="dot"></span>
-                Автоматика активна
-              </div>
-              <div class="gate-chip glass">
-                <strong>−30°C</strong>
-                <small>работает в мороз</small>
-              </div>
+          <div class="hero-media reveal">
+            <div class="photo-slot photo-hero" data-label="Фото объекта · Вологда">
+              <svg class="cam" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="14" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="27" r="7" stroke="currentColor" stroke-width="2.5"/><path d="M17 14l3-5h8l3 5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <span>Фото вашего объекта</span>
+              <small>заменяется на реальную съёмку</small>
+            </div>
+            <div class="hero-spec">
+              <b>−30°C</b>
+              <span>работает в мороз</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-marquee" aria-hidden="true">
-          <div class="marquee-track">
-            <span>ZAIGER</span><i>◆</i><span>DoorHan</span><i>◆</i><span>Hörmann</span><i>◆</i>
-            <span>ALUTECH</span><i>◆</i><span>CAME</span><i>◆</i><span>Nice</span><i>◆</i>
-            <span>ZAIGER</span><i>◆</i><span>DoorHan</span><i>◆</i><span>Hörmann</span><i>◆</i>
-            <span>ALUTECH</span><i>◆</i><span>CAME</span><i>◆</i><span>Nice</span><i>◆</i>
-          </div>
+        <div class="hero-stats">
+          <article class="reveal"><strong data-count="10" data-suffix="+">0</strong><span>лет ставим ворота</span></article>
+          <article class="reveal"><strong data-count="4.9" data-decimals="1">0</strong><span>рейтинг на Яндекс.Картах</span></article>
+          <article class="reveal"><strong data-count="0" data-suffix=" ₽">0 ₽</strong><span>выезд замерщика по городу</span></article>
+          <article class="reveal"><strong data-count="500" data-suffix="+">0</strong><span>объектов в регионе</span></article>
         </div>
       </section>
 
+      <!-- BRAND MARQUEE -->
+      <div class="brand-strip" aria-label="Бренды и автоматика">
+        <div class="brand-track">
+          <span>ZAIGER</span><i></i><span>DoorHan</span><i></i><span>Hörmann</span><i></i>
+          <span>ALUTECH</span><i></i><span>CAME</span><i></i><span>NICE</span><i></i>
+          <span>ZAIGER</span><i></i><span>DoorHan</span><i></i><span>Hörmann</span><i></i>
+          <span>ALUTECH</span><i></i><span>CAME</span><i></i><span>NICE</span><i></i>
+        </div>
+      </div>
+
+      <!-- TASKS -->
       <section class="section tasks" id="tasks">
         <div class="section-head reveal">
-          <p class="section-kicker">Выберите задачу</p>
-          <h2>Не заставляем разбираться <span class="grad-text">в каталогах</span></h2>
+          <p class="kicker">Выберите задачу</p>
+          <h2>Не заставляем разбираться в каталогах</h2>
           <p class="section-sub">
             Клиенты приходят не за «моделью ворот», а за понятным результатом:
             тепло в гараже, закрытый двор, управляемый въезд или срочный ремонт.
@@ -135,74 +106,41 @@
         </div>
 
         <div class="task-grid">
-          <article class="task-card glass-card reveal" data-tilt>
-            <span class="task-icon" aria-hidden="true">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="5" y="6" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="2.2" />
-                <path d="M5 11.5H23M5 17H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-              </svg>
-            </span>
+          <article class="task-card reveal">
+            <span class="task-num">01</span>
+            <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="5" y="6" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M5 11.5H23M5 17H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
             <small>Для гаража</small>
             <h3>Тёплые секционные ворота</h3>
             <p>Полотно уходит под потолок, держит тепло и открывается с пульта без выхода из машины.</p>
             <a class="card-link" href="#calculator">Посчитать гараж <i>→</i></a>
           </article>
-
-          <article class="task-card glass-card reveal" data-tilt>
-            <span class="task-icon" aria-hidden="true">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 22V8a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                <path d="M16 22V11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                <path d="M16 14h6M19 11l3 3-3 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 22h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-              </svg>
-            </span>
+          <article class="task-card reveal">
+            <span class="task-num">02</span>
+            <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M4 22V8a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 22V11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M16 14h6M19 11l3 3-3 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 22h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
             <small>Для участка</small>
             <h3>Откатные и распашные ворота</h3>
             <p>Подберём конструкцию под ширину проезда, забор, снеговую нагрузку и автоматику.</p>
             <a class="card-link" href="#calculator">Подобрать въезд <i>→</i></a>
           </article>
-
-          <article class="task-card glass-card reveal" data-tilt>
-            <span class="task-icon" aria-hidden="true">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 23V11l10-6 10 6v12" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                <path d="M4 23h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                <rect x="11" y="15" width="6" height="8" stroke="currentColor" stroke-width="2.2" />
-              </svg>
-            </span>
+          <article class="task-card reveal">
+            <span class="task-num">03</span>
+            <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M4 23V11l10-6 10 6v12" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M4 23h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="11" y="15" width="6" height="8" stroke="currentColor" stroke-width="2.2"/></svg></span>
             <small>Для бизнеса</small>
             <h3>Промышленные решения</h3>
             <p>Ворота для склада, сервиса, автомойки или производства с договором и обслуживанием.</p>
             <a class="card-link" href="#request">Запросить КП <i>→</i></a>
           </article>
-
-          <article class="task-card glass-card reveal" data-tilt>
-            <span class="task-icon" aria-hidden="true">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="12" width="4" height="11" rx="1" stroke="currentColor" stroke-width="2" />
-                <path d="M7 14 22 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
-                <circle cx="22" cy="8" r="1.6" fill="currentColor" />
-              </svg>
-            </span>
+          <article class="task-card reveal">
+            <span class="task-num">04</span>
+            <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="12" width="4" height="11" rx="1" stroke="currentColor" stroke-width="2"/><path d="M7 14 22 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="22" cy="8" r="1.6" fill="currentColor"/></svg></span>
             <small>Для двора</small>
             <h3>Шлагбаумы и контроль въезда</h3>
             <p>Закроем двор, парковку или территорию от чужих машин и настроим доступ для своих.</p>
             <a class="card-link" href="#request">Обсудить объект <i>→</i></a>
           </article>
-
-          <article class="task-card task-featured reveal" data-tilt>
-            <span class="task-icon" aria-hidden="true">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="14" cy="14" r="3.4" stroke="currentColor" stroke-width="2.2" />
-                <path
-                  d="M14 5v2.4M14 20.6V23M23 14h-2.4M7.4 14H5M20.1 7.9l-1.7 1.7M9.6 18.4l-1.7 1.7M20.1 20.1l-1.7-1.7M9.6 9.6 7.9 7.9"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </span>
+          <article class="task-card task-accent reveal">
+            <span class="task-num">05</span>
+            <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="3.4" stroke="currentColor" stroke-width="2.2"/><path d="M14 5v2.4M14 20.6V23M23 14h-2.4M7.4 14H5M20.1 7.9l-1.7 1.7M9.6 18.4l-1.7 1.7M20.1 20.1l-1.7-1.7M9.6 9.6 7.9 7.9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
             <small>Сервис</small>
             <h3>Ремонт, пульты, приводы</h3>
             <p>Если ворота не открываются, потерялся пульт или нужен привод NICE / DoorHan / Came.</p>
@@ -211,11 +149,12 @@
         </div>
       </section>
 
+      <!-- CALCULATOR -->
       <section class="section calc-section" id="calculator">
         <div class="calc-layout">
           <div class="calc-copy reveal">
-            <p class="section-kicker">Онлайн-расчёт</p>
-            <h2>Предварительная цена <span class="grad-text">за минуту</span></h2>
+            <p class="kicker">Онлайн-расчёт</p>
+            <h2>Предварительная цена за минуту</h2>
             <p class="section-sub">
               Точную смету фиксируем после замера, но уже сейчас можно понять порядок бюджета
               и выбрать уровень комплектации без звонка менеджеру.
@@ -223,18 +162,17 @@
             <ul class="check-list">
               <li>Цена уточняется по размерам проёма, бренду и автоматике</li>
               <li>После замера фиксируем комплектацию и стоимость в договоре</li>
-              <li>Сразу предложим дополнительные пульты, GSM и датчики безопасности</li>
+              <li>Сразу предложим пульты, GSM и датчики безопасности</li>
             </ul>
           </div>
 
-          <div class="calculator-card glass-card reveal">
+          <div class="calculator-card reveal">
             <div class="calc-tabs" data-calc-group="type">
               <button class="chip active" type="button" data-price="92000" data-label="секционные">Секционные</button>
               <button class="chip" type="button" data-price="118000" data-label="откатные">Откатные</button>
               <button class="chip" type="button" data-price="76000" data-label="распашные">Распашные</button>
               <button class="chip" type="button" data-price="86000" data-label="шлагбаум">Шлагбаум</button>
             </div>
-
             <div class="calc-body">
               <div class="calc-controls">
                 <label>
@@ -259,7 +197,6 @@
                   <span class="toggle-text">Автоматика и 2 пульта в комплекте</span>
                 </label>
               </div>
-
               <aside class="calc-result">
                 <small>Ориентировочно</small>
                 <strong>от <span id="calcPrice">92 000</span> ₽</strong>
@@ -271,190 +208,138 @@
         </div>
       </section>
 
+      <!-- SYSTEMS -->
       <section class="section systems" id="systems">
         <div class="section-head reveal">
-          <p class="section-kicker">3 уровня бюджета</p>
-          <h2>Выбираем не «самое дорогое», <span class="grad-text">а подходящее</span></h2>
+          <p class="kicker">3 уровня бюджета</p>
+          <h2>Выбираем не «самое дорогое», а подходящее</h2>
         </div>
-
         <div class="system-grid">
-          <article class="system-card glass-card reveal" data-tilt>
-            <div class="system-top">
-              <span class="tier">Доступный</span>
-              <strong>Zaiger</strong>
-            </div>
+          <article class="system-card reveal">
+            <div class="system-top"><span class="tier">Доступный</span><strong>Zaiger</strong></div>
             <p>Для гаража, дачи и задач, где важны разумная цена и базовая надёжность.</p>
-            <ul>
-              <li>базовая комплектация</li>
-              <li>автоматика в комплекте</li>
-              <li>подходит для типовых проёмов</li>
-            </ul>
+            <ul><li>базовая комплектация</li><li>автоматика в комплекте</li><li>подходит для типовых проёмов</li></ul>
           </article>
-
-          <article class="system-card featured reveal" data-tilt>
+          <article class="system-card featured reveal">
             <div class="featured-badge">Хит выбора</div>
-            <div class="system-top">
-              <span class="tier">Оптимальный</span>
-              <strong>DoorHan</strong>
-            </div>
+            <div class="system-top"><span class="tier">Оптимальный</span><strong>DoorHan</strong></div>
             <p>Самый частый выбор для частных домов: баланс цены, срока поставки и сервиса.</p>
-            <ul>
-              <li>утеплённые панели</li>
-              <li>работа в мороз</li>
-              <li>много цветов и дизайнов</li>
-            </ul>
+            <ul><li>утеплённые панели</li><li>работа в мороз</li><li>много цветов и дизайнов</li></ul>
           </article>
-
-          <article class="system-card glass-card reveal" data-tilt>
-            <div class="system-top">
-              <span class="tier">Премиум</span>
-              <strong>Hörmann</strong>
-            </div>
+          <article class="system-card reveal">
+            <div class="system-top"><span class="tier">Премиум</span><strong>Hörmann</strong></div>
             <p>Когда важны ресурс, тихая работа, фасадная эстетика и премиальная фурнитура.</p>
-            <ul>
-              <li>максимальный ресурс</li>
-              <li>тихий привод</li>
-              <li>премиальные покрытия</li>
-            </ul>
+            <ul><li>максимальный ресурс</li><li>тихий привод</li><li>премиальные покрытия</li></ul>
           </article>
         </div>
       </section>
 
+      <!-- WINTER -->
       <section class="section winter-proof">
         <div class="winter-layout">
           <div class="winter-card reveal">
-            <div class="winter-glow" aria-hidden="true"></div>
-            <p class="section-kicker">Вологодская зима</p>
+            <p class="kicker light">Вологодская зима</p>
             <h2>Почему ворота не должны примерзать</h2>
             <p>
               Главный страх владельца — нажать кнопку утром и остаться у закрытого двора.
               Мы проектируем систему под снег, мороз и реальный режим эксплуатации.
             </p>
+            <div class="photo-slot photo-winter" data-label="Фото: монтаж зимой">
+              <svg class="cam" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="14" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="27" r="7" stroke="currentColor" stroke-width="2.5"/><path d="M17 14l3-5h8l3 5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <span>Фото зимнего монтажа</span>
+            </div>
           </div>
           <div class="proof-grid">
-            <article class="proof-item glass-card reveal">
-              <b>01</b>
-              <h3>Тёплое полотно</h3>
-              <p>Сэндвич-панели и уплотнители уменьшают промерзание гаража и наледь по контуру.</p>
-            </article>
-            <article class="proof-item glass-card reveal">
-              <b>02</b>
-              <h3>Автоматика под нагрузку</h3>
-              <p>Подбираем привод по массе полотна, ширине проёма и частоте открываний.</p>
-            </article>
-            <article class="proof-item glass-card reveal">
-              <b>03</b>
-              <h3>Настройка и сервис</h3>
-              <p>Проверяем ход, балансировку, фотоэлементы, пульты и объясняем обслуживание.</p>
-            </article>
+            <article class="proof-item reveal"><b>01</b><h3>Тёплое полотно</h3><p>Сэндвич-панели и уплотнители уменьшают промерзание гаража и наледь по контуру.</p></article>
+            <article class="proof-item reveal"><b>02</b><h3>Автоматика под нагрузку</h3><p>Подбираем привод по массе полотна, ширине проёма и частоте открываний.</p></article>
+            <article class="proof-item reveal"><b>03</b><h3>Настройка и сервис</h3><p>Проверяем ход, балансировку, фотоэлементы, пульты и объясняем обслуживание.</p></article>
           </div>
         </div>
       </section>
 
+      <!-- PROCESS -->
       <section class="section process" id="process">
         <div class="section-head reveal">
-          <p class="section-kicker">Как работаем</p>
-          <h2>От заявки до ворот — <span class="grad-text">без хаоса</span></h2>
+          <p class="kicker">Как работаем</p>
+          <h2>От заявки до ворот — без хаоса и подрядчиков со стороны</h2>
         </div>
-
         <div class="timeline">
-          <article class="glass-card reveal"><span>01</span><h3>Консультация</h3><p>Уточняем задачу, тип ворот, адрес, пожелания по цвету и автоматике.</p></article>
-          <article class="glass-card reveal"><span>02</span><h3>Замер</h3><p>Замерщик приезжает на объект, проверяет проём, подъезд и условия монтажа.</p></article>
-          <article class="glass-card reveal"><span>03</span><h3>Смета</h3><p>Сравниваем Zaiger, DoorHan и Hörmann, показываем разницу по цене и ресурсу.</p></article>
-          <article class="glass-card reveal"><span>04</span><h3>Договор</h3><p>Фиксируем комплектацию, сроки, оплату и гарантийные обязательства.</p></article>
-          <article class="glass-card reveal"><span>05</span><h3>Монтаж</h3><p>Своя бригада устанавливает ворота, подключает автоматику и обучает пользованию.</p></article>
+          <article class="reveal"><span>01</span><h3>Консультация</h3><p>Уточняем задачу, тип ворот, адрес, пожелания по цвету и автоматике.</p></article>
+          <article class="reveal"><span>02</span><h3>Замер</h3><p>Замерщик приезжает на объект, проверяет проём, подъезд и условия монтажа.</p></article>
+          <article class="reveal"><span>03</span><h3>Смета</h3><p>Сравниваем Zaiger, DoorHan и Hörmann, показываем разницу по цене и ресурсу.</p></article>
+          <article class="reveal"><span>04</span><h3>Договор</h3><p>Фиксируем комплектацию, сроки, оплату и гарантийные обязательства.</p></article>
+          <article class="reveal"><span>05</span><h3>Монтаж</h3><p>Своя бригада ставит ворота, подключает автоматику и обучает пользованию.</p></article>
         </div>
       </section>
 
-      <section class="section trust">
-        <div class="trust-layout">
-          <div class="trust-copy reveal">
-            <p class="section-kicker">Почему нам доверяют</p>
-            <h2>Местная команда, которую можно найти <span class="grad-text">после монтажа</span></h2>
-            <p>
-              Мы не исчезаем после установки: есть шоурум, сервис, гарантия и понятные контакты.
-              Можно приехать в Строй Двор АКСОН, посмотреть образцы и обсудить комплектацию вживую.
-            </p>
-          </div>
-          <div class="trust-grid">
-            <article class="glass-card reveal"><strong>4,9</strong><span>на Яндекс.Картах</span></article>
-            <article class="glass-card reveal"><strong>10+</strong><span>лет опыта монтажной команды</span></article>
-            <article class="glass-card reveal"><strong>АКСОН</strong><span>шоурум на Окружном шоссе 18с3</span></article>
-            <article class="glass-card reveal"><strong>сервис</strong><span>ремонтируем, настраиваем, обслуживаем</span></article>
-          </div>
-        </div>
-      </section>
-
+      <!-- WORKS -->
       <section class="section works" id="works">
         <div class="section-head reveal">
-          <p class="section-kicker">Готовые решения</p>
-          <h2>Показываем не картинки из каталога, <span class="grad-text">а сценарии объектов</span></h2>
+          <p class="kicker">Наши работы</p>
+          <h2>Реальные объекты в Вологде и области</h2>
+          <p class="section-sub">Здесь встанут фото ваших объектов — сейчас размечены слоты под замену.</p>
         </div>
         <div class="works-grid">
-          <article class="work-card work-large reveal" data-tilt>
-            <div class="work-abstract work-abstract-lg" aria-hidden="true"></div>
+          <article class="work-card work-large reveal">
+            <div class="photo-slot" data-label="Частный дом">
+              <svg class="cam" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="14" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="27" r="7" stroke="currentColor" stroke-width="2.5"/><path d="M17 14l3-5h8l3 5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <span>Фото объекта</span>
+            </div>
             <div class="work-body">
               <span>Частный дом</span>
               <h3>Откатные ворота + секционный гараж</h3>
               <p>Решение для въезда и тёплого гаража в едином стиле фасада.</p>
             </div>
           </article>
-          <article class="work-card reveal" data-tilt>
-            <div class="work-abstract blue" aria-hidden="true"></div>
+          <article class="work-card reveal">
+            <div class="photo-slot" data-label="Гараж">
+              <svg class="cam" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="14" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="27" r="7" stroke="currentColor" stroke-width="2.5"/><path d="M17 14l3-5h8l3 5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <span>Фото объекта</span>
+            </div>
             <div class="work-body">
               <span>Гараж</span>
               <h3>Секционные ворота DoorHan</h3>
               <p>Утеплённое полотно, автоматика и два пульта.</p>
             </div>
           </article>
-          <article class="work-card reveal" data-tilt>
-            <div class="work-abstract green" aria-hidden="true"></div>
+          <article class="work-card reveal">
+            <div class="photo-slot" data-label="УК и дворы">
+              <svg class="cam" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="14" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="27" r="7" stroke="currentColor" stroke-width="2.5"/><path d="M17 14l3-5h8l3 5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <span>Фото объекта</span>
+            </div>
             <div class="work-body">
               <span>УК и дворы</span>
               <h3>Шлагбаум с доступом жильцов</h3>
-              <p>Ограничение въезда, пульты и последующее обслуживание.</p>
+              <p>Ограничение въезда, пульты и обслуживание.</p>
             </div>
           </article>
         </div>
       </section>
 
+      <!-- OBJECTIONS -->
       <section class="section objections">
         <div class="section-head reveal">
-          <p class="section-kicker">Частые сомнения</p>
-          <h2>Ответы на вопросы, <span class="grad-text">которые задают до звонка</span></h2>
+          <p class="kicker">Частые сомнения</p>
+          <h2>Ответы на вопросы, которые задают до звонка</h2>
         </div>
         <div class="objection-grid">
-          <details open class="glass-card reveal">
-            <summary>Зимой точно не замёрзнет?</summary>
-            <p>Для этого важны не обещания, а подбор полотна, привода, уплотнений и правильная настройка. На замере смотрим реальные условия эксплуатации.</p>
-          </details>
-          <details class="glass-card reveal">
-            <summary>Сколько времени занимает установка?</summary>
-            <p>Типовой монтаж на объекте обычно занимает один день. Общий срок зависит от выбранного бренда, размеров и готовности проёма.</p>
-          </details>
-          <details class="glass-card reveal">
-            <summary>Можно не переплачивать за премиум?</summary>
-            <p>Да. Для этого и сравниваем три уровня: Zaiger, DoorHan и Hörmann. Показываем, где экономия разумна, а где лучше не упрощать.</p>
-          </details>
-          <details class="glass-card reveal">
-            <summary>Кто будет устанавливать?</summary>
-            <p>Монтаж выполняет собственная бригада. Компания отвечает и за подбор, и за установку, и за сервис после сдачи объекта.</p>
-          </details>
+          <details open class="reveal"><summary>Зимой точно не замёрзнет?</summary><p>Важны не обещания, а подбор полотна, привода, уплотнений и правильная настройка. На замере смотрим реальные условия эксплуатации.</p></details>
+          <details class="reveal"><summary>Сколько времени занимает установка?</summary><p>Типовой монтаж обычно занимает один день. Общий срок зависит от бренда, размеров и готовности проёма.</p></details>
+          <details class="reveal"><summary>Можно не переплачивать за премиум?</summary><p>Да. Для этого и сравниваем три уровня: Zaiger, DoorHan и Hörmann. Показываем, где экономия разумна, а где лучше не упрощать.</p></details>
+          <details class="reveal"><summary>Кто будет устанавливать?</summary><p>Монтаж выполняет собственная бригада. Компания отвечает за подбор, установку и сервис после сдачи объекта.</p></details>
         </div>
       </section>
 
+      <!-- CTA -->
       <section class="section final-cta" id="request">
         <div class="cta-card">
-          <div class="cta-glow" aria-hidden="true"></div>
+          <div class="hero-hazard" aria-hidden="true"></div>
           <div class="final-copy reveal">
-            <p class="section-kicker">Бесплатный следующий шаг</p>
-            <h2>Оставьте заявку — <span class="grad-text">рассчитаем и назначим замер</span></h2>
-            <p>
-              Перезвоним в рабочее время, зададим несколько вопросов по проёму и подскажем,
-              какую комплектацию стоит рассматривать.
-            </p>
+            <p class="kicker light">Бесплатный следующий шаг</p>
+            <h2>Оставьте заявку — рассчитаем и назначим замер</h2>
+            <p>Перезвоним в рабочее время, зададим пару вопросов по проёму и подскажем комплектацию.</p>
           </div>
-          <form class="lead-form glass reveal">
+          <form class="lead-form reveal">
             <input type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя" />
             <input type="tel" name="phone" placeholder="Телефон" aria-label="Телефон" />
             <select name="task" aria-label="Что нужно">
@@ -470,36 +355,21 @@
         </div>
       </section>
 
+      <!-- CONTACTS -->
       <section class="section contacts" id="contacts">
         <div class="contacts-layout">
-          <div class="contact-info glass-card reveal">
-            <p class="section-kicker">Шоурум и связь</p>
+          <div class="contact-info reveal">
+            <p class="kicker">Шоурум и связь</p>
             <h2>Приезжайте посмотреть ворота вживую</h2>
-            <address>
-              <strong>Шоурум</strong>
-              г. Вологда, Окружное шоссе 18с3, Строй Двор АКСОН
-            </address>
-            <address>
-              <strong>Офис</strong>
-              г. Вологда, ул. Щетинина 6, оф. 3
-            </address>
-            <address>
-              <strong>Телефон</strong>
-              <a href="tel:+79211245822">+7 (921) 124-58-22</a>
-            </address>
-            <address>
-              <strong>Почта</strong>
-              <a href="mailto:avtoVorota35@yandex.ru">avtoVorota35@yandex.ru</a>
-            </address>
-            <div class="messengers">
-              <a href="#" aria-label="ВКонтакте">VK</a>
-              <a href="#" aria-label="WhatsApp">WA</a>
-              <a href="#" aria-label="Telegram">TG</a>
-            </div>
+            <address><strong>Шоурум</strong>г. Вологда, Окружное шоссе 18с3, Строй Двор АКСОН</address>
+            <address><strong>Офис</strong>г. Вологда, ул. Щетинина 6, оф. 3</address>
+            <address><strong>Телефон</strong><a href="tel:+79211245822">+7 (921) 124-58-22</a></address>
+            <address><strong>Почта</strong><a href="mailto:avtoVorota35@yandex.ru">avtoVorota35@yandex.ru</a></address>
+            <div class="messengers"><a href="#">VK</a><a href="#">WA</a><a href="#">TG</a></div>
           </div>
           <div class="map-card reveal" aria-label="Карта проезда">
             <div class="map-pin" aria-hidden="true"><span></span></div>
-            <div class="map-body glass">
+            <div class="map-body">
               <span>Окружное шоссе 18с3</span>
               <strong>Строй Двор АКСОН</strong>
               <p>Точка для встречи, выбора образцов и обсуждения комплектации.</p>
@@ -514,27 +384,12 @@
         <div class="footer-brand">
           <a class="brand" href="#top" aria-label="Автоворота35">
             <span class="brand-mark" aria-hidden="true"><span></span></span>
-            <span class="brand-text">
-              <strong>Автоворота35</strong>
-              <small>Вологда и область</small>
-            </span>
+            <span class="brand-text"><strong>Автоворота35</strong><small>Вологда и область</small></span>
           </a>
           <p>Автоматические ворота, шлагбаумы, рольставни, приводы и сервис под ключ.</p>
         </div>
-        <nav aria-label="Каталог">
-          <strong>Каталог</strong>
-          <a href="#tasks">Секционные</a>
-          <a href="#tasks">Откатные</a>
-          <a href="#tasks">Распашные</a>
-          <a href="#tasks">Шлагбаумы</a>
-        </nav>
-        <nav aria-label="Компания">
-          <strong>Компания</strong>
-          <a href="#works">Работы</a>
-          <a href="#process">Этапы</a>
-          <a href="#systems">Бренды</a>
-          <a href="#contacts">Контакты</a>
-        </nav>
+        <nav aria-label="Каталог"><strong>Каталог</strong><a href="#tasks">Секционные</a><a href="#tasks">Откатные</a><a href="#tasks">Распашные</a><a href="#tasks">Шлагбаумы</a></nav>
+        <nav aria-label="Компания"><strong>Компания</strong><a href="#works">Работы</a><a href="#process">Этапы</a><a href="#systems">Бренды</a><a href="#contacts">Контакты</a></nav>
         <div class="footer-contact">
           <a class="footer-phone" href="tel:+79211245822">+7 (921) 124-58-22</a>
           <p>В будни с 10:00 до 19:00<br />Вологда, Окружное шоссе 18с3</p>
