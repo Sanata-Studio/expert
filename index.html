@@ -121,39 +121,59 @@
         </div>
       </div>
 
-      <!-- ================= (01) CATALOG (LIGHT) ================= -->
-      <section class="section section--light" id="catalog">
+      <!-- ================= (01) TASKS (LIGHT) ================= -->
+      <section class="section section--light" id="tasks">
         <div class="wrap">
-          <div class="section-head section-head--row reveal">
-            <div>
-              <p class="kicker"><span class="k-num">01</span> Каталог</p>
-              <h2>Что нужно установить?</h2>
-            </div>
-            <div class="cat-filters" data-cat-group>
-              <button class="cat-chip active" type="button">На гараж</button>
-              <button class="cat-chip" type="button">На въезд</button>
-              <button class="cat-chip" type="button">Шлагбаум</button>
-              <button class="cat-chip" type="button">Ремонт</button>
-            </div>
+          <div class="section-head reveal">
+            <p class="kicker"><span class="k-num">01</span> Выберите задачу</p>
+            <h2>Не заставляем разбираться в каталогах</h2>
+            <p class="section-sub">
+              Клиенты приходят не за «моделью ворот», а за понятным результатом:
+              тепло в гараже, закрытый двор, управляемый въезд или срочный ремонт.
+            </p>
           </div>
 
-          <div class="cat-grid">
-            <a class="cat-card cat-featured reveal" href="#calculator">
-              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
-              <div class="cat-info"><span class="cat-badge">Хит продаж</span><h3>Секционные ворота</h3><b>от 92 000 ₽</b></div>
-            </a>
-            <a class="cat-card cat-wide reveal" href="#calculator">
-              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
-              <div class="cat-info"><h3>Откатные</h3><b>от 118 000 ₽</b></div>
-            </a>
-            <a class="cat-card cat-a reveal" href="#calculator">
-              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
-              <div class="cat-info"><h3>Распашные</h3><b>от 76 000 ₽</b></div>
-            </a>
-            <a class="cat-card cat-b reveal" href="#request">
-              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
-              <div class="cat-info"><h3>Промышленные</h3><b>от 168 000 ₽</b></div>
-            </a>
+          <div class="task-grid">
+            <article class="task-card reveal">
+              <span class="task-num">01</span>
+              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="5" y="6" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M5 11.5H23M5 17H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+              <small>Для гаража</small>
+              <h3>Тёплые секционные ворота</h3>
+              <p>Полотно уходит под потолок, держит тепло и открывается с пульта без выхода из машины.</p>
+              <a class="card-link" href="#calculator">Посчитать гараж <i>→</i></a>
+            </article>
+            <article class="task-card reveal">
+              <span class="task-num">02</span>
+              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M4 22V8a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 22V11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M16 14h6M19 11l3 3-3 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 22h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+              <small>Для участка</small>
+              <h3>Откатные и распашные ворота</h3>
+              <p>Подберём конструкцию под ширину проезда, забор, снеговую нагрузку и автоматику.</p>
+              <a class="card-link" href="#calculator">Подобрать въезд <i>→</i></a>
+            </article>
+            <article class="task-card reveal">
+              <span class="task-num">03</span>
+              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M4 23V11l10-6 10 6v12" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M4 23h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="11" y="15" width="6" height="8" stroke="currentColor" stroke-width="2.2"/></svg></span>
+              <small>Для бизнеса</small>
+              <h3>Промышленные решения</h3>
+              <p>Ворота для склада, сервиса, автомойки или производства с договором и обслуживанием.</p>
+              <a class="card-link" href="#request">Запросить КП <i>→</i></a>
+            </article>
+            <article class="task-card reveal">
+              <span class="task-num">04</span>
+              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="12" width="4" height="11" rx="1" stroke="currentColor" stroke-width="2"/><path d="M7 14 22 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="22" cy="8" r="1.6" fill="currentColor"/></svg></span>
+              <small>Для двора</small>
+              <h3>Шлагбаумы и контроль въезда</h3>
+              <p>Закроем двор, парковку или территорию от чужих машин и настроим доступ для своих.</p>
+              <a class="card-link" href="#request">Обсудить объект <i>→</i></a>
+            </article>
+            <article class="task-card task-accent reveal">
+              <span class="task-num">05</span>
+              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="3.4" stroke="currentColor" stroke-width="2.2"/><path d="M14 5v2.4M14 20.6V23M23 14h-2.4M7.4 14H5M20.1 7.9l-1.7 1.7M9.6 18.4l-1.7 1.7M20.1 20.1l-1.7-1.7M9.6 9.6 7.9 7.9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+              <small>Сервис</small>
+              <h3>Ремонт, пульты, приводы</h3>
+              <p>Если ворота не открываются, потерялся пульт или нужен привод NICE / DoorHan / Came.</p>
+              <a class="card-link" href="#request">Оставить заявку <i>→</i></a>
+            </article>
           </div>
         </div>
       </section>
@@ -220,59 +240,39 @@
         </div>
       </section>
 
-      <!-- ================= (03) TASKS (LIGHT) ================= -->
-      <section class="section section--light" id="tasks">
+      <!-- ================= (03) CATALOG (LIGHT) ================= -->
+      <section class="section section--light" id="catalog">
         <div class="wrap">
-          <div class="section-head reveal">
-            <p class="kicker"><span class="k-num">03</span> Выберите задачу</p>
-            <h2>Не заставляем разбираться в каталогах</h2>
-            <p class="section-sub">
-              Клиенты приходят не за «моделью ворот», а за понятным результатом:
-              тепло в гараже, закрытый двор, управляемый въезд или срочный ремонт.
-            </p>
+          <div class="section-head section-head--row reveal">
+            <div>
+              <p class="kicker"><span class="k-num">03</span> Каталог</p>
+              <h2>Что нужно установить?</h2>
+            </div>
+            <div class="cat-filters" data-cat-group>
+              <button class="cat-chip active" type="button">На гараж</button>
+              <button class="cat-chip" type="button">На въезд</button>
+              <button class="cat-chip" type="button">Шлагбаум</button>
+              <button class="cat-chip" type="button">Ремонт</button>
+            </div>
           </div>
 
-          <div class="task-grid">
-            <article class="task-card reveal">
-              <span class="task-num">01</span>
-              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="5" y="6" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M5 11.5H23M5 17H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
-              <small>Для гаража</small>
-              <h3>Тёплые секционные ворота</h3>
-              <p>Полотно уходит под потолок, держит тепло и открывается с пульта без выхода из машины.</p>
-              <a class="card-link" href="#calculator">Посчитать гараж <i>→</i></a>
-            </article>
-            <article class="task-card reveal">
-              <span class="task-num">02</span>
-              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M4 22V8a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 22V11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M16 14h6M19 11l3 3-3 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 22h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
-              <small>Для участка</small>
-              <h3>Откатные и распашные ворота</h3>
-              <p>Подберём конструкцию под ширину проезда, забор, снеговую нагрузку и автоматику.</p>
-              <a class="card-link" href="#calculator">Подобрать въезд <i>→</i></a>
-            </article>
-            <article class="task-card reveal">
-              <span class="task-num">03</span>
-              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M4 23V11l10-6 10 6v12" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M4 23h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="11" y="15" width="6" height="8" stroke="currentColor" stroke-width="2.2"/></svg></span>
-              <small>Для бизнеса</small>
-              <h3>Промышленные решения</h3>
-              <p>Ворота для склада, сервиса, автомойки или производства с договором и обслуживанием.</p>
-              <a class="card-link" href="#request">Запросить КП <i>→</i></a>
-            </article>
-            <article class="task-card reveal">
-              <span class="task-num">04</span>
-              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="12" width="4" height="11" rx="1" stroke="currentColor" stroke-width="2"/><path d="M7 14 22 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="22" cy="8" r="1.6" fill="currentColor"/></svg></span>
-              <small>Для двора</small>
-              <h3>Шлагбаумы и контроль въезда</h3>
-              <p>Закроем двор, парковку или территорию от чужих машин и настроим доступ для своих.</p>
-              <a class="card-link" href="#request">Обсудить объект <i>→</i></a>
-            </article>
-            <article class="task-card task-accent reveal">
-              <span class="task-num">05</span>
-              <span class="task-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="3.4" stroke="currentColor" stroke-width="2.2"/><path d="M14 5v2.4M14 20.6V23M23 14h-2.4M7.4 14H5M20.1 7.9l-1.7 1.7M9.6 18.4l-1.7 1.7M20.1 20.1l-1.7-1.7M9.6 9.6 7.9 7.9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
-              <small>Сервис</small>
-              <h3>Ремонт, пульты, приводы</h3>
-              <p>Если ворота не открываются, потерялся пульт или нужен привод NICE / DoorHan / Came.</p>
-              <a class="card-link" href="#request">Оставить заявку <i>→</i></a>
-            </article>
+          <div class="cat-grid">
+            <a class="cat-card cat-featured reveal" href="#calculator">
+              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
+              <div class="cat-info"><span class="cat-badge">Хит продаж</span><h3>Секционные ворота</h3><b>от 92 000 ₽</b></div>
+            </a>
+            <a class="cat-card cat-wide reveal" href="#calculator">
+              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
+              <div class="cat-info"><h3>Откатные</h3><b>от 118 000 ₽</b></div>
+            </a>
+            <a class="cat-card cat-a reveal" href="#calculator">
+              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
+              <div class="cat-info"><h3>Распашные</h3><b>от 76 000 ₽</b></div>
+            </a>
+            <a class="cat-card cat-b reveal" href="#request">
+              <div class="cat-ph"><svg class="cam" viewBox="0 0 48 48"><use href="#cam"/></svg><span>Фото</span><small>or browse files</small></div>
+              <div class="cat-info"><h3>Промышленные</h3><b>от 168 000 ₽</b></div>
+            </a>
           </div>
         </div>
       </section>
