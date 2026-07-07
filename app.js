@@ -198,3 +198,13 @@ document.querySelectorAll('[data-calc-group="type"]').forEach((group) => {
 });
 
 updateCalculator();
+
+/* ---------- catalog filter chips ---------- */
+document.querySelectorAll("[data-cat-group]").forEach((group) => {
+  group.addEventListener("click", (event) => {
+    const chip = event.target.closest(".cat-chip");
+    if (!chip) return;
+    group.querySelectorAll(".cat-chip").forEach((c) => c.classList.remove("active"));
+    chip.classList.add("active");
+  });
+});
