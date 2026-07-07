@@ -208,3 +208,44 @@ document.querySelectorAll("[data-cat-group]").forEach((group) => {
     chip.classList.add("active");
   });
 });
+
+/* ---------- photo slots: click to load your own image (preview helper) ---------- */
+function wirePhotoUpload(el, apply) {
+  el.classList.add("uploadable");
+  const hint = document.createElement("span");
+  hint.className = "upload-hint";
+  hint.textContent = "📷 Загрузить фото";
+  el.appendChild(hint);
+
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
+    input.addEventListener("change", () => {
+      const file = input.files && input.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        apply(el, reader.result);
+        hint.textContent = "📷 Заменить фото";
+      };
+      reader.readAsDataURL(file);
+    });
+    input.click();
+  });
+}
+
+document.querySelectorAll(".photo-slot").forEach((slot) => {
+  wirePhotoUpload(slot, (el, url) => {
+    el.style.backgroundImage = `url("${url}")`;
+    el.classList.add("has-photo");
+  });
+});
+
+document.querySelectorAll(".cat-card").forEach((card) => {
+  wirePhotoUpload(card, (el, url) => {
+    el.style.setProperty("--photo", `url("${url}")`);
+    el.classList.add("has-photo");
+  });
+});

@@ -581,3 +581,41 @@ address a:hover { color: var(--red-dark); }
   .section-head--row { flex-direction: column; align-items: flex-start; }
   .footer-bottom { flex-direction: column; }
 }
+
+/* ================= PHOTO UPLOAD (preview helper) ================= */
+.photo-slot, .cat-card { cursor: pointer; }
+.photo-slot { transition: border-color 0.2s ease; }
+.photo-slot:hover { border-color: var(--red); }
+.cat-card:hover { outline: 2px solid rgba(236, 30, 39, 0.4); outline-offset: -2px; }
+
+.photo-slot.has-photo {
+  border-style: solid; border-color: var(--line-d);
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+}
+.photo-slot.has-photo .cam,
+.photo-slot.has-photo > span,
+.photo-slot.has-photo > small { display: none; }
+
+.cat-card.has-photo {
+  border-style: solid;
+  background:
+    linear-gradient(180deg, rgba(11, 16, 26, 0) 34%, rgba(11, 16, 26, 0.92) 100%),
+    var(--photo) center / cover no-repeat;
+}
+.cat-card.has-photo .cat-ph { display: none; }
+.cat-card.has-photo .cat-info h3,
+.cat-card.has-photo .cat-info b { color: #fff; }
+
+/* small "change photo" hint */
+.uploadable { position: relative; }
+.upload-hint {
+  position: absolute; z-index: 4; right: 12px; bottom: 12px;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 11px; border-radius: 8px;
+  background: rgba(11, 16, 26, 0.8); color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 11px; font-weight: 800; letter-spacing: 0.02em;
+  opacity: 0; transform: translateY(4px); transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none; backdrop-filter: blur(6px);
+}
+.uploadable:hover .upload-hint { opacity: 1; transform: translateY(0); }
